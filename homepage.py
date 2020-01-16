@@ -41,7 +41,7 @@ def Homepage():
     nav,
     body
     ])
-return layout
+    return layout
 
 app = dash.Dash(__name__, external_stylesheets = [dbc.themes.UNITED])
 app.layout = Homepage()
