@@ -113,6 +113,7 @@ header = html.H3(
 def ice_App():
     return html.Div(
         [
+            nav,
             html.Div([
                 html.H2(
                     'Arctic Sea Ice Extent',
