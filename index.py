@@ -4,13 +4,15 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from app import App, build_graph
-from ice import ice_App, sea_options, df, year_options, value_range
+from ice import ice_App, sea_options, df, year_options, value_range, month_options
 from homepage import Homepage
 import pandas as pd
 import plotly.graph_objects as go
+from numpy import arange,array,ones
+from scipy import stats
 
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.UNITED])
+app = dash.Dash(__name__)
 
 
 app.config.suppress_callback_exceptions = True
