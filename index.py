@@ -4,6 +4,7 @@ import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 from app import App, build_graph
+from ice import ice_App
 from homepage import Homepage
 
 
@@ -23,6 +24,8 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '/time-series':
         return App()
+    elif pathname == '/ice':
+        return ice_App()
     else:
         return Homepage()
 
