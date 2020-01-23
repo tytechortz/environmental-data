@@ -13,21 +13,18 @@ body = dbc.Container(
            [
                dbc.Col(
                   [
-                     html.H2("Heading"),
+                     html.H2("Arctic Sea Ice"),
                      html.P(
                          """\
-                      Donec id elit non mi porta gravida at eget metus.Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentumnibh, ut fermentum massa justo sit amet risus. Etiam porta semmalesuada magna mollis euismod. Donec sed odio dui. Donec id elit nonmi porta gravida at eget metus. Fusce dapibus, tellus ac cursuscommodo, tortor mauris condimentum nibh, ut fermentum massa justo sitamet risus. Etiam porta sem malesuada magna mollis euismod. Donec sedodio dui."""
+                      Arctic Sea Ice extent, data from National Snow Ice Data Center"""
                       ),
-                           dbc.Button("View details", color="secondary"),
+                      dbc.Button("View details", color="secondary"),
                    ],
-                  md=4,
+                  md=6,
                ),
               dbc.Col(
                  [
-                     html.H2("Graph"),
-                     dcc.Graph(
-                         figure={"data": [{"x": [1, 2, 3], "y": [1, 4, 9]}]}
-                            ),
+                     html.Img(src='assets/ice.jpg', height=200),
                         ]
                      ),
                 ]
