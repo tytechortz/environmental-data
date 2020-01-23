@@ -24,7 +24,7 @@ body = dbc.Container(
                ),
               dbc.Col(
                  [
-                     html.Img(src='assets/ase.jpg', height=300),
+                     html.Img(src='assets/ase.jpg', height=350),
                         ]
                      ),
                 ]
