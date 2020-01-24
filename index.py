@@ -175,12 +175,12 @@ def daily_ranking(df_fdta, selected_sea, selected_product):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.Div('{}'.format(sort_dr_sea.YEAR[i]), style={'text-align': 'center'}) for i in range(10)
+                            html.Div('{}'.format(sort_dr_sea.YEAR[i]), style={'text-align': 'center'}) for i in range(15)
                         ],
                             className='eight columns'
                         ),
                         html.Div([
-                            html.Div('{:,.0f}'.format(sort_dr_sea.iloc[i,0]), style={'text-align': 'left'}) for i in range(10)
+                            html.Div('{:,.0f}'.format(sort_dr_sea.iloc[i,0]), style={'text-align': 'left'}) for i in range(15)
                         ],
                             className='four columns'
                         ),  
@@ -214,12 +214,12 @@ def record_ice_table(selected_sea, selected_value, df_fdta, max_rows=10):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.Div('{:.0f}'.format(sama.iloc[y][1]), style={'text-align': 'center'}) for y in range(0,14)
+                            html.Div('{:.0f}'.format(sama.iloc[y][1]), style={'text-align': 'center'}) for y in range(0,15)
                         ],
                             className='eight columns'
                         ),
                         html.Div([
-                            html.Div('{:,.0f}'.format(sama.iloc[y,0]), style={'text-align': 'left'}) for y in range(0,14)
+                            html.Div('{:,.0f}'.format(sama.iloc[y,0]), style={'text-align': 'left'}) for y in range(0,15)
                         ],
                             className='four columns'
                         ),  
@@ -248,12 +248,12 @@ def record_ice_table_a(selected_sea, df_fdta, max_rows=10):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.Div('{:.0f}'.format(sama.iloc[y][1]), style={'text-align': 'center'}) for y in range(0,14)
+                            html.Div('{:.0f}'.format(sama.iloc[y][1]), style={'text-align': 'center'}) for y in range(0,15)
                         ],
                             className='eight columns'
                         ),
                         html.Div([
-                            html.Div('{:,.0f}'.format(sama.iloc[y,0]), style={'text-align': 'left'}) for y in range(0,14)
+                            html.Div('{:,.0f}'.format(sama.iloc[y,0]), style={'text-align': 'left'}) for y in range(0,15)
                         ],
                             className='four columns'
                         ),  
@@ -277,7 +277,7 @@ def annual_ranking(selected_product):
 
         x = 0
 
-        rankings = [['2006', 0],['2007', 0],['2008', 0],['2009', 0],['2010', 0],['2011', 0],['2012', 0],['2013', 0],['2014', 0],['2015', 0],['2016', 0],['2017', 0],['2018', 0],['2019', 0]]
+        rankings = [['2006', 0],['2007', 0],['2008', 0],['2009', 0],['2010', 0],['2011', 0],['2012', 0],['2013', 0],['2014', 0],['2015', 0],['2016', 0],['2017', 0],['2018', 0],['2019', 0],['2020', 0]]
         rank = pd.DataFrame(rankings, columns = ['Year','Pts'])
     
         while x < 366:
@@ -305,12 +305,12 @@ def annual_ranking(selected_product):
                 html.Div([
                     html.Div([
                         html.Div([
-                            html.Div('{}'.format(sorted_rank.iloc[y][0]), style={'text-align': 'center'}) for y in range(0,14)
+                            html.Div('{}'.format(sorted_rank.iloc[y][0]), style={'text-align': 'center'}) for y in range(0,15)
                         ],
                             className='eight columns'
                         ),
                         html.Div([
-                            html.Div('{:,}'.format(sorted_rank.iloc[y,1]), style={'text-align': 'left'}) for y in range(0,14)
+                            html.Div('{:,}'.format(sorted_rank.iloc[y,1]), style={'text-align': 'left'}) for y in range(0,15)
                         ],
                             className='four columns'
                         ),  
