@@ -10,7 +10,7 @@ body = dbc.Container([
          'Arctic Sea Ice',
          ),
          html.P(
-            """ Arctic Sea Ice extent, data from National Snow Ice Data Center"""
+            """ Track Arctic Sea Ice extent from 2006 to present, with data from National Snow Ice Data Center MASIE dataset.  Graph sea ice extent by year, display data for current day, average monthly extent, extent for current date by year, and yearly rankings of annual minimum and maximum.  Annual ranks are the sum of points calculated daily with highest extent given a value of 1, and lowest extent with the value equal to years in the dataset."""
          ),
          dbc.Button("Data", color="primary", href="/ice"),
       ],
@@ -30,14 +30,14 @@ body = dbc.Container([
          'Arctic Sea Ice',
          ),
          html.P(
-            """ Arctic Sea Ice extent, data from National Snow Ice Data Center"""
+            """ Denver Weather Record 1950-Present"""
          ),
          dbc.Button("Data", color="primary", href="/ice"),
       ],
          className='six columns'
       ),
       html.Div([
-         html.Img(src='assets/ase.jpg', height=350)
+         html.Img(src='assets/den-weather.jpg', height=350)
       ],
          className='five columns'
       ),
