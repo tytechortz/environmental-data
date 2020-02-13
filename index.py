@@ -12,7 +12,8 @@ from numpy import arange,array,ones
 from scipy import stats
 
 
-app = dash.Dash(__name__)
+# app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash()
 
 
 app.config.suppress_callback_exceptions = True
@@ -23,12 +24,20 @@ app.layout = html.Div([
 ])
 
 
+# @app.callback(Output('page-content', 'children'),
+#             [Input('url', 'pathname')])
+# def display_page(pathname):
+#     if pathname == '/time-series':
+#         return App()
+#     elif pathname == '/ice':
+#         return ice_App()
+#     else:
+#         return Homepage()
+
 @app.callback(Output('page-content', 'children'),
             [Input('url', 'pathname')])
 def display_page(pathname):
-    if pathname == '/time-series':
-        return App()
-    elif pathname == '/ice':
+    if pathname == '/ice':
         return ice_App()
     else:
         return Homepage()
