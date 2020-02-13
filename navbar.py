@@ -1,8 +1,8 @@
-import dash_bootstrap_components as dbc
-import dash_html_components as html
-import dash_core_components as dcc
+# import dash_bootstrap_components as dbc
+# import dash_html_components as html
+# import dash_core_components as dcc
 
-def Navbar():
+# def Navbar():
   # navbar = html.Header([
     # dbc.NavbarSimple(
     #     children=[
@@ -24,10 +24,17 @@ def Navbar():
     #   sticky="top",
     # )
   # ])
-  navbar = html.Div([
-    dcc.Location(id='url', refresh=False),
-    dcc.Link('Home', href='/'),
-    dcc.Link('Arctic Sea Ice', href='/ice'),
-    html.Div(id='page-content')
-  ])
-  return navbar
+  # navbar = html.Div([
+    # dcc.Location(id='url', refresh=False),
+  #   dcc.Link('Home', href='/'),
+  #   dcc.Link('Arctic Sea Ice', href='/ice'),
+  #   html.Div(id='page-content')
+  # ])
+  # return navbar
+# html.Header([
+#                 html.Div([
+#                     dcc.Link('Home', href='/'),
+#                     dcc.Link('Arctic Sea Ice', href='/ice'),
+#                     html.Div(id='page-content')
+#                 ])
+#             ]),

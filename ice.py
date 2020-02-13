@@ -10,7 +10,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Output, Input
 ## Navbar
-from navbar import Navbar
+# from navbar import Navbar
 
 import time
 from datetime import datetime
@@ -107,17 +107,19 @@ arctic_r = arctic[(arctic.index.month == m) & (arctic.index.day == d)]
 sort_arctic_r = arctic_r.sort_values(axis=0, ascending=True)
 
 
-nav = Navbar()
-
-header = html.H3(
-    'Select the name of an Illinois city to see its population!'
-)
-
+# nav = Navbar()
 
 def ice_App():
     return html.Div(
         [
-            nav,
+            html.Header([
+                html.Div([
+                    dcc.Link('Home', href='/'),
+                    dcc.Link('Arctic Sea Ice', href='/ice'),
+                    # html.Div(id='page-content')
+                ])
+            ]),
+            # nav,
             html.Div([
                 html.H2(
                     'Arctic Sea Ice Extent',
