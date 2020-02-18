@@ -107,7 +107,6 @@ arctic_r = arctic[(arctic.index.month == m) & (arctic.index.day == d)]
 sort_arctic_r = arctic_r.sort_values(axis=0, ascending=True)
 
 
-# nav = Navbar()
 
 def ice_App():
     return html.Div(
@@ -116,10 +115,8 @@ def ice_App():
                 html.Div([
                     dcc.Link('Home', href='/'),
                     dcc.Link('Arctic Sea Ice', href='/ice'),
-                    # html.Div(id='page-content')
                 ])
             ]),
-            # nav,
             html.Div([
                 html.H2(
                     'Arctic Sea Ice Extent',

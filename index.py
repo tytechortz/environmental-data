@@ -522,6 +522,7 @@ def update_current_stats(selected_sea, selected_product, df_fdta):
 def update_figure(selected_sea, selected_year, df_fdta):
     traces = []
     df_fdta = pd.read_json(df_fdta)
+    print(df_fdta)
     # selected_years = [selected_year1,selected_year2,selected_year3,selected_year4]
     for x in selected_year:
         sorted_daily_values=df_fdta[df_fdta.index.year == x]
@@ -1148,51 +1149,6 @@ def update_figure(temp_data, rec_highs, rec_lows, norms, selected_year, period):
         )
     return {'data': trace, 'layout': layout}, temps.to_json()
 
-@app.callback(
-    Output('daily-max-t', 'children'),
-    [Input('product', 'value'),
-    Input('d-max-max', 'children'),
-    Input('avg-of-dly-highs', 'children'),
-    Input('d-min-max', 'children')])
-def max_stats(product, d_max_max, admaxh, d_min_max):
-    dly_max_max = d_max_max
-    admaxh = admaxh
-    dly_min_max = d_min_max
-    if product == 'climate-for-day':
-        return html.Div([
-            html.Div([
-                html.Div('Maximum Temperatures', style={'text-align':'center', 'color':'red'})
-            ]),
-            html.Div([
-                html.Div([
-                    html.Div([
-                        html.Div('Maximum', style={'text-align':'center', 'color': 'red'}),
-                        html.Div('{}'.format(dly_max_max), style={'text-align':'center'})
-                    ],
-                        className='round1 four columns'
-                    ),
-                    html.Div([
-                        html.Div('Average', style={'text-align':'center', 'color': 'red'}),
-                        html.Div('{:.0f}'.format(admaxh), style={'text-align':'center'})
-                    ],
-                        className='round1 four columns'
-                    ),
-                    html.Div([
-                        html.Div('Minimum', style={'text-align':'center', 'color': 'red'}),
-                        html.Div('{}'.format(dly_min_max), style={'text-align':'center'})
-                    ],
-                        className='round1 four columns'
-                    ),
-                ],
-                    className='row'
-                ),
-            ],
-                className='pretty_container'
-            ),
-                
-        ],
-            # className='twelve columns'
-        ),
 
 @app.callback(
     Output('daily-min-t', 'children'),
@@ -1204,6 +1160,9 @@ def min_stats(product, d_min_min, adminl, d_max_min):
     dly_min_min = d_min_min
     adminl = adminl
     dly_max_min = d_max_min
+    print(dly_min_min)
+    print(adminl)
+    print(dly_max_min)
     if product == 'climate-for-day':
         return html.Div([
             html.Div([
@@ -1226,6 +1185,55 @@ def min_stats(product, d_min_min, adminl, d_max_min):
                     html.Div([
                         html.Div('Maximum', style={'text-align':'center', 'color': 'blue'}),
                         html.Div('{}'.format(dly_max_min), style={'text-align':'center'})
+                    ],
+                        className='round1 four columns'
+                    ),
+                ],
+                    className='row'
+                ),
+            ],
+                className='pretty_container'
+            ),
+                
+        ],
+            # className='twelve columns'
+        ),
+
+@app.callback(
+    Output('daily-max-t', 'children'),
+    [Input('product', 'value'),
+    Input('d-max-max', 'children'),
+    Input('avg-of-dly-highs', 'children'),
+    Input('d-min-max', 'children')])
+def max_stats(product, d_max_max, admaxh, d_min_max):
+    dly_max_max = d_max_max
+    admaxh = admaxh
+    dly_min_max = d_min_max
+    print(dly_max_max)
+    print(admaxh)
+    print(dly_min_max)
+    if product == 'climate-for-day':
+        return html.Div([
+            html.Div([
+                html.Div('Maximum Temperatures', style={'text-align':'center', 'color':'red'})
+            ]),
+            html.Div([
+                html.Div([
+                    html.Div([
+                        html.Div('Maximum', style={'text-align':'center', 'color': 'red'}),
+                        html.Div('{}'.format(dly_max_max), style={'text-align':'center'})
+                    ],
+                        className='round1 four columns'
+                    ),
+                    html.Div([
+                        html.Div('Average', style={'text-align':'center', 'color': 'red'}),
+                        html.Div('{:.0f}'.format(admaxh), style={'text-align':'center'})
+                    ],
+                        className='round1 four columns'
+                    ),
+                    html.Div([
+                        html.Div('Minimum', style={'text-align':'center', 'color': 'red'}),
+                        html.Div('{}'.format(dly_min_max), style={'text-align':'center'})
                     ],
                         className='round1 four columns'
                     ),

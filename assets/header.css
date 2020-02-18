@@ -197,9 +197,9 @@ body {
   position: relative;
 }
 
-/* #header {
+#header {
   align-items: center;
-} */
+}
 
 #learnMore {
   align: center;
@@ -499,46 +499,3 @@ hr {
   content: "";
   display: table;
   clear: both; }
-
-
-/* .app-header {
-  height: 60px;
-  line-height: 60px;
-  border-bottom: thin lightgrey solid;
-}
-
-.app-header .app-header--title {
-  padding-left: 5px;
-  text-align: center;
-  color: dodgerblue;
-  font-size: 40px;
-  text-shadow: gray 2px 2px
-}
-
-table {
-  table-layout: fixed;
-  width: 100%;
-  border-collapse: collapse;
-  border: 3px solid dodgerblue;
-}
-
-thead th:nth-child(1) {
-width: 50%;
-}
-
-thead th:nth-child(2) {
-width: 50%;
-}
-
-th {
-padding: 20px;
-text-align: center;
-font-size: 1.3em
-}
-
-td {
-  text-align: center;
-  font-size: 1.25em;
-  padding: 5px
-}
-*/
